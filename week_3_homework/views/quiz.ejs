@@ -1,0 +1,77 @@
+<%- include('./partials/header') %>
+<% if (name && name != "undefined") { %>
+<h1>Welcome <%=name%></h1>
+<% } else { %>
+    <h1>Please login on the homepage first!</h1>
+<% } %> 
+<h1>Test your knowledge with the Zombie Challenge</h1>
+
+
+
+<img width="400px" src="https://image.shutterstock.com/z/stock-photo-zombie-aftermath-when-zombies-come-be-ready-99981176.jpg" alt="">
+<p>Check all correct boxes. Multiple choice may have more than one answer</p>
+<form action="/grading/check-answers" method="post" id="quiz">
+   1. Where is the first place to go when a zombie outbreak occurs? <br>
+   <input type="checkbox" name="question1" value="A" defaultChecked="false"> A) An army surplus store is the best place to stock up on survival gear. <br>
+   <input type="checkbox" name="question1" value="B" defaultChecked="false"> B) A supermarket where there is an adequate amount of food. <br>
+   <input type="checkbox" name="question1" value="C" defaultChecked="false"> C) An Army base to stock up on weapons. <br>
+   <input type="checkbox" name="question1" value="D" defaultChecked="false"> D) In a zombie den, where they will never look for you. <br>
+   <br>
+
+   2. If you find yourself inside a zombie den, what should you do?<br>
+   <input type="checkbox" name="question2" value="A" defaultChecked="false"> A) Don’t resist. Face it, you will become a zombie anyway.<br>
+   <input type="checkbox" name="question2" value="A" defaultChecked="false"> B) Don’t ever go inside a zombie den.<br>
+   <input type="checkbox" name="question2" value="A" defaultChecked="false"> C) Pretend to be a zombie until you can escape.<br>
+   <input type="checkbox" name="question2" value="A" defaultChecked="false"> D) Use stealth and fight as needed, as you try to escape.<br>
+   <br>
+
+   3. One shot from a weapon will always kill a zombie? <br>
+   <input type="radio" name="question3" value="true"> A) True <br>
+   <input type="radio" name="question3" value="false"> B) False <br>
+   <br>
+
+   4. Biting a zombie will keep you from turning into a zombie? <br>
+   <input type="radio" name="question4" value="true"> A) True <br>
+   <input type="radio" name="question4" value="false"> B) False <br>
+   <br>
+
+   5. You can smell a zombie’s rotting flesh before they get close? <br>
+   <input type="radio" name="question5" value="true"> A) True <br>
+   <input type="radio" name="question5" value="false"> B) False <br>
+   <br>
+
+   6. A zombie can run faster than a moving vehicle? <br>
+   <input type="radio" name="question6" value="true"> A) True <br>
+   <input type="radio" name="question6" value="false"> B) False <br>
+   <br>
+
+   7. Where is the best place to settle down after a zombie outbreak? <br>
+   <input type="checkbox" name="question7" value="A" defaultChecked="false"> A) Find a sucluded farmhouse like those people did in that movie.<br>
+   <input type="checkbox" name="question7" value="A" defaultChecked="false"> B) Find an army base and defend it with the stockpile of weapons. <br>
+   <input type="checkbox" name="question7" value="A" defaultChecked="false"> C) Sail away to a nice secluded island. Zombies can’t swim. <br>
+   <input type="checkbox" name="question7" value="A" defaultChecked="false"> D) Launch yourself into spac on a rocket ship. There are other planets out there. <br>
+   <br>
+
+   8. Zombie brains are partially decomposed and therefore they don’t have full brain capacity? <br>
+   <input type="radio" name="question8" value="true"> A) True <br>
+   <input type="radio" name="question8" value="false"> B) False <br>
+   <br>
+
+   9. Zombies can be created by practicing voodoo rituals? <br>
+   <input type="radio" name="question9" value="true"> A) True <br>
+   <input type="radio" name="question9" value="false"> B) False <br>
+   <br>
+   
+   10. What is the best way to kill a zombie? <br>
+   <input type="checkbox" name="question10" value="A" defaultChecked="false"> A) Throw salt on the zombie and watch it melt. <br>
+   <input type="checkbox" name="question10" value="A" defaultChecked="false"> B) Aim for maximum damage focused on the head or neck. <br>
+   <input type="checkbox" name="question10" value="A" defaultChecked="false"> C) Dont kill them. Domesticate and train them not to eat guests. <br>
+   <input type="checkbox" name="question10" value="A" defaultChecked="false"> D) Garlic and a crucifix are the best way to rid the world of zombies. <br>
+   <br>
+   <input type="submit" value="submit quiz"> <br>
+   
+</form>
+
+
+
+<%- include('./partials/footer') %>
