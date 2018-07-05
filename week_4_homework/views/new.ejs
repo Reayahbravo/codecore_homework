@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+<form action="/cohorts/new" method="POST">
+
+  <h4>Logo URL:</h4>
+  <input type="text" class="form-control" name="logoUrl" placeholder="http://brandmark.io/logo-rank/random/pepsi.png">
+  <br>
+  <h4>Cohort Name:</h4>
+  <input type="text" class="form-control" name="name" placeholder="Flying Funks">
+  <br>
+  <h4>Team Members:</h4>
+  <input type="text" class="form-control" name="members" placeholder="Jon Snow, Daenerys, Melisandre, Arya Stark"> <br>
+  <input type="submit" class="btn btn-outline-primary" value="Submit" style="float: right;">
+        
+</form>
+<%- include("partials/footer") %>

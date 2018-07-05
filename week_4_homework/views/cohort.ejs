@@ -1,0 +1,44 @@
+<%- include("partials/header") %>
+
+<div class="card" style="border-color:grey; border-style: solid; border-width: 1px; border-radius: 4px; width: 560px; padding: 20px; margin: 20px 0px;">
+  
+
+  <div class="card-body">
+  <img src="<%= cohort.logoUrl %>" width="50" style="float: left; margin: 0 10px 10px 0;">
+    <h4>
+      <%= cohort.name %> 
+    </h4><br clear="all">
+    <p class="card-text">
+      <%= cohort.members %>
+    </p>
+
+    <form action="/cohorts/<%= cohort.id %>" method="GET">
+      <input type="radio" name="method" value="teamCount"> Team Count</input><br>
+      <input type="radio" name="method" value="perTeam"> Number Per Team</input><br>
+      <br>
+      Quantity<br>
+      <input class="form-control" type="text" name="quantity"></input><br>
+      <br>
+      <input type="submit" class="btn btn-primary btn-lg btn-block" value="Assign Teams">
+    </form>
+
+    
+    <% if (teams.length>0) { %>
+    <br>
+    <div class="card-body" style="width: 100%; font-weight: bold;">
+      <div style="width: 40px; display: inline-block;"># </div>
+      <div style="width: 40px; display: inline;">Members</div> <br clear="all">
+    </div>
+    <% } %>
+    <% for (let i=0; i<teams.length; i++) { %>
+    <div class="card-body" style="border-color: #cccccc; border-style: solid; border-width: 1px; border-radius: 4px; width: 100%;">
+      <div style="width: 40px; display: inline-block;"><%= i+1 %></div>
+      <div style="display: inline;"><%= teams[i] %></div> <br clear="all">
+    </div>
+<% } %>
+
+
+  </div>
+</div>
+
+<%- include("partials/footer") %>
