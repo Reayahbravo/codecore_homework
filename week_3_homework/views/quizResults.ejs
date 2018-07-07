@@ -1,0 +1,35 @@
+<%- include('./partials/header') %>
+<% if (name && name != "undefined") { %>
+<h1>Welcome <%=name%></h1>
+<h1>Your Zombie Knowledge Results</h1>
+<img width="400px" src="https://itsmesarahjane.files.wordpress.com/2015/04/82c34-graphic_zombiehorde.png?w=672&h=261" alt="">
+
+<br clear="all">
+<br>
+<% if (score) { %>
+<h1>Your score is <%=score%>%</h1>
+
+Did you survive the zombie knowledge? Your quiz results are here <br>
+<%      if (grade) { %>
+Your score is <%=score%>% for a grade of <%=grade%>. 
+<%      if (grade=='F') { %>
+Don't worry, the zombies probably won't find you.<br>
+<%      } else { %>
+Good job, you'll probably be able to survive a few days!
+<%      } %>
+<%      } %>
+<% } %>
+
+<form action="/quiz">
+    <input type="submit" value="Retest" />
+</form>
+<% } else { %>
+    <h1>Please login at the homepage first</h1>
+<% } %> 
+
+<br>
+<form action="/">
+    <input type="submit" value="Go back to home page" />
+</form>
+<%- include('./partials/footer') %>
+
